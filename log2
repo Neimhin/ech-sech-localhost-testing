@@ -1,0 +1,215 @@
++ : /home/neimhin/code/openssl
++ export LD_LIBRARY_PATH=/home/neimhin/code/openssl
++ LD_LIBRARY_PATH=/home/neimhin/code/openssl
++ : /usr/bin
++ :
++ [[ '' == '' ]]
++ CMDPATH=/home/neimhin/code/openssl/apps/openssl
++ VG=no
++ DEBUG=no
++ NOECH=no
++ GREASE=no
++ GSUITE=0x20,1,1
++ GSUITESET=no
++ GTYPE_DEF=65037
++ GTYPE=65037
++ DEFALPNOUTER=outer,public,h2
++ DEFALPNINNER=inner,secret,http/1.1
++ DEFALPNVAL=' -ech_alpn_outer outer,public,h2 -alpn inner,secret,http/1.1'
++ DOALPN=yes
++ SUPPALPN=
++ PORT=443
++ SUPPLIEDPORT=
++ SUPPLIEDOUTER=
++ HTTPPATH=
++ SUPPLIEDSERVER=
++ SUPPLIEDHIDDEN=
++ SUPPLIEDPNO=
++ SUPPLIEDWAIT=
++ SUPPLIEDECH=
++ SUPPLIEDCADIR=
++ SUPPLIEDSESSION=
++ REUSINGSESSION=no
++ TESTCUST=no
++ HIDDEN=crypto.cloudflare.com
++ DEFFRAG=cdn-cgi/trace
++ PNO=
++ CAPATH=/etc/ssl/certs/
++ CAFILE=./cadir/oe.csr
++ REALCERT=no
++ CIPHERSUITES=
++ HRR=no
++ SELECTED=
++ IGNORE_CID=no
++ EARLY_DATA=no
++ IP_PROTSEL=
+++ whenisitagain
+++ /bin/date -u +%Y%m%d-%H%M%S
++ NOW=20240219-223645
++ echo 'Running /home/neimhin/code/ech-dev-utils/scripts/echcli.sh at 20240219-223645'
++ '[' '!' -f /usr/bin/getopt ']'
+++ /usr/bin/getopt --version
+++ grep -c util-linux
++ getoptcnt=1
++ [[ 1 != \1 ]]
+++ /usr/bin/getopt -s bash -o 46a:C:c:def:gGhH:IjnNO:p:P:Rrs:S:t:Tv -l four,six,alpn,choose:,clear_sni:,debug,early,filepath:,grease,greasesuite,help,hidden:,ignore_cid,just,noech,noalpn,outer:,port:,echpub:,hrr,realcert,server:,session:,gtype:,test_cust,valgrind,wait: -- --wait 0 -s localhost -H foo.example.com -p 8443 -P echconfig.pem -f index.html -- -sech_symmetric_key aa00
++ options=' --wait '\''0'\'' -s '\''localhost'\'' -H '\''foo.example.com'\'' -p '\''8443'\'' -P '\''echconfig.pem'\'' -f '\''index.html'\'' -- '\''-sech_symmetric_key'\'' '\''aa00'\'''
++ eval set -- ' --wait '\''0'\'' -s '\''localhost'\'' -H '\''foo.example.com'\'' -p '\''8443'\'' -P '\''echconfig.pem'\'' -f '\''index.html'\'' -- '\''-sech_symmetric_key'\'' '\''aa00'\'''
+++ set -- --wait 0 -s localhost -H foo.example.com -p 8443 -P echconfig.pem -f index.html -- -sech_symmetric_key aa00
++ '[' 15 -gt 0 ']'
++ case "$1" in
++ SUPPLIEDWAIT=0
++ shift
++ shift
++ '[' 13 -gt 0 ']'
++ case "$1" in
++ SUPPLIEDSERVER=localhost
++ shift
++ shift
++ '[' 11 -gt 0 ']'
++ case "$1" in
++ SUPPLIEDHIDDEN=foo.example.com
++ shift
++ shift
++ '[' 9 -gt 0 ']'
++ case "$1" in
++ SUPPLIEDPORT=8443
++ shift
++ shift
++ '[' 7 -gt 0 ']'
++ case "$1" in
++ SUPPLIEDECH=echconfig.pem
++ shift
++ shift
++ '[' 5 -gt 0 ']'
++ case "$1" in
++ HTTPPATH=index.html
++ shift
++ shift
++ '[' 3 -gt 0 ']'
++ case "$1" in
++ shift
++ break
++ hidden=crypto.cloudflare.com
++ [[ foo.example.com != '' ]]
++ hidden=foo.example.com
++ TRACING=
+++ mktemp
++ tmpf=/tmp/tmp.69MQ9Gwi8A
++ /home/neimhin/code/openssl/apps/openssl s_client -help
+++ grep -c 'trace output of protocol messages' /tmp/tmp.69MQ9Gwi8A
++ tcount=1
++ [[ 1 == \1 ]]
++ TRACING='-trace '
++ rm -f /tmp/tmp.69MQ9Gwi8A
++ [[ which dig == '' ]]
++ dbgstr=' '
++ [[ no == \y\e\s ]]
++ [[ no == \y\e\s ]]
++ hrrstr=
++ [[ no == \y\e\s ]]
++ vgcmd=
++ [[ no == \y\e\s ]]
++ [[ 8443 != '' ]]
++ PORT=8443
++ snioutercmd=' '
++ [[ '' != '' ]]
++ [[ '' != '' ]]
++ target=' -connect foo.example.com:8443 '
++ server=foo.example.com
++ [[ localhost != '' ]]
++ target=' -connect localhost:8443'
++ server=localhost
++ selstr=
++ [[ '' != '' ]]
++ ciphers=
++ [[ no == \n\o ]]
++ [[ no == \n\o ]]
++ [[ echconfig.pem != '' ]]
++ '[' '!' -f echconfig.pem ']'
+++ basename echconfig.pem
++ ssfname=echconfig.pem
+++ basename echconfig.pem .pem
++ '[' echconfig '!=' echconfig.pem ']'
+++ tail -2 echconfig.pem
+++ head -1
++ ECH='  -ech_config_list AD7+DQA6RwAgACDgeAPF8zzIjaStfGN64lvKndcXDIqfa0Wgz3ztEpLkPwAEAAEAAQALZXhhbXBsZS5jb20AAA=='
++ [[ no == \n\o ]]
++ [[ no == \n\o ]]
++ [[   -ech_config_list AD7+DQA6RwAgACDgeAPF8zzIjaStfGN64lvKndcXDIqfa0Wgz3ztEpLkPwAEAAEAAQALZXhhbXBsZS5jb20AAA== == '' ]]
++ [[ 65037 == \6\5\0\3\7 ]]
++ grease_str=' -ech_grease '
++ [[ no == \y\e\s ]]
++ ignore_str=' '
++ [[ no == \y\e\s ]]
++ echstr='-servername foo.example.com   -ech_config_list AD7+DQA6RwAgACDgeAPF8zzIjaStfGN64lvKndcXDIqfa0Wgz3ztEpLkPwAEAAEAAQALZXhhbXBsZS5jb20AAA==   '
++ [[ no == \y\e\s ]]
++ [[ no == \y\e\s ]]
++ [[ no == \y\e\s ]]
++ [[ no == \n\o ]]
++ [[ foo.example.com != \N\O\N\E ]]
++ echstr=' -servername foo.example.com   -ech_config_list AD7+DQA6RwAgACDgeAPF8zzIjaStfGN64lvKndcXDIqfa0Wgz3ztEpLkPwAEAAEAAQALZXhhbXBsZS5jb20AAA==   '
++ [[ '' != '' ]]
++ [[ no == \n\o ]]
++ [[ foo.example.com == '' ]]
++ httphost=foo.example.com
++ [[ no == \y\e\s ]]
++ httpreq='GET /index.html HTTP/1.1\r\nConnection: keep-alive\r\nHost: foo.example.com\r\n\r\n'
++ [[ localhost != \l\o\c\a\l\h\o\s\t ]]
++ [[ no == \n\o ]]
++ [[ -f ./cadir/oe.csr ]]
++ certsdb=' -CAfile ./cadir/oe.csr'
++ force13='-no_ssl3 -no_tls1 -no_tls1_1 -no_tls1_2'
++ session=
++ [[ '' != '' ]]
++ alpn=
++ [[ yes == \y\e\s ]]
++ [[ no == \n\o ]]
++ [[ no == \y\e\s ]]
++ alpn=' -ech_alpn_outer outer,public,h2 -alpn inner,secret,http/1.1'
++ [[ '' != '' ]]
++ earlystr=
++ [[ no == \y\e\s ]]
+++ mktemp /tmp/echtestXXXX
++ TMPF=/tmp/echtestCzzc
++ [[ no == \y\e\s ]]
++ sleepaftr=2
++ [[ 0 != '' ]]
++ sleepaftr=0
++ echo 2
++ [[ no == \y\e\s ]]
++ echo -e 'GET /index.html HTTP/1.1\r\nConnection: keep-alive\r\nHost: foo.example.com\r\n\r\n'
++ sleep 0
++ /home/neimhin/code/openssl/apps/openssl s_client -CAfile ./cadir/oe.csr -no_ssl3 -no_tls1 -no_tls1_1 -no_tls1_2 -connect localhost:8443 -servername foo.example.com -ech_config_list AD7+DQA6RwAgACDgeAPF8zzIjaStfGN64lvKndcXDIqfa0Wgz3ztEpLkPwAEAAEAAQALZXhhbXBsZS5jb20AAA== -ech_alpn_outer outer,public,h2 -alpn inner,secret,http/1.1 2
+++ grep -c '200 OK' /tmp/echtestCzzc
++ c200=0
++ true
+++ grep -c 'ECH: success' /tmp/echtestCzzc
++ csucc=0
++ true
+++ grep -ce '^HTTP/1.1 4[0-9][0-9] ' /tmp/echtestCzzc
++ c4xx=0
++ true
++ [[ no == \y\e\s ]]
++ [[ no == \y\e\s ]]
++ [[ no == \y\e\s ]]
+++ grep -c 'ECH: success' /tmp/echtestCzzc
++ goodresult=0
++ true
++ echo '/home/neimhin/code/ech-dev-utils/scripts/echcli.sh Summary: '
+++ grep 'ECH: ' /tmp/echtestCzzc
++ allresult=
++ sslerror=
+++ grep -c :error: /tmp/echtestCzzc
++ sslerrorcount=0
++ true
++ [[ 0 != \0 ]]
++ rm -f /tmp/echtestCzzc
++ ((  0 > 0  ))
++ [[ no != \y\e\s ]]
++ [[ no != \y\e\s ]]
++ echo 'Bummer - probably didn'\''t work'
++ res=1
++ [[ '' != '' ]]
++ echo
++ exit 1
